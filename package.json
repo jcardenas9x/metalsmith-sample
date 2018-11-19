@@ -1,0 +1,19 @@
+{
+  "name": "metalsmith-sample",
+  "version": "1.0.0",
+  "description": "Sample documentation static site powered by Metalsmith",
+  "main": "build.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "metalsmith",
+    "static"
+  ],
+  "author": "Jonathan Cardenas",
+  "license": "ISC",
+  "dependencies": {
+    "metalsmith": "^2.3.0",
+    "metalsmith-markdown": "^1.1.0"
+  }
+}
