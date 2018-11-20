@@ -1,0 +1,813 @@
+<!<!DOCTYPE html>
+<!--[if lt IE 7]><html class="ie ie6" lang="en"><![endif]-->
+<!--[if IE 7]><html class="ie ie7" lang="en"><![endif]-->
+<!--[if IE 8]><html class="ie ie8" lang="en"><![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="A">
+  <meta name="author" content="B">
+  <meta name="keywords" content="C">
+
+  <title>Documentation powered by Metalsmith</title>
+
+  <link rel="shortcut icon" href=".../assets/images/favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" type="text/css" href="../fonts/font-awesome-4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="../css/stroke.css">
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="../css/animate.css">
+  <link rel="stylesheet" type="text/css" href="../css/prettyPhoto.css">
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+
+  <link rel="stylesheet" type="text/css" href="../js/syntax-highlighter/styles/shCore.css" media="all">
+  <link rel="stylesheet" type="text/css" href="../js/syntax-highlighter/styles/shThemeRDark.css" media="all">
+  <link rel=”stylesheet” type="text/css" href="https://highlightjs.org/static/demo/styles/atom-one-dark.css">
+
+  <!-- CUSTOM -->
+  <link rel="stylesheet" type="text/css" href="../css/custom.css">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+</head>
+
+<body>
+
+  <div id="wrapper">
+
+    <div class="container">
+
+      <section id="top" class="section docs-heading">
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="big-title text-center">
+              <h1>EOSJS</h1>
+              <p class="lead">Javascript API for EOSIO-based blockchain integration with EOSIO RPC API</p>
+            </div>
+          </div>
+        </div>
+
+        <hr>
+
+      </section>
+
+      <div class="row">
+
+        <div class="col-md-3">
+          <nav class="docs-sidebar" role="navigation">
+            <ul class="nav">
+                <li><a href="readme.html">Readme</a></li>
+                <li><a href="txn_example.html">Transaction Examples</a></li>
+                <li><a href="browsers.html">Browsers</a></li>
+                <li><a href="">API</a></li>
+                <li><a href="">API Interfaces</a></li>
+                <li><a href="">JS-Sig</a></li>
+                <li><a href="">JSON-RPC</a></li>
+                <li><a href="">Numeric</a></li>
+                <li><a href="">RPC-Error</a></li>
+                <li><a href="">RPC-Interfaces</a></li>
+                <li><a href="">Serialize</a></li>
+          </nav>
+          <hr>
+            <nav class="docs-sidebar" data-spy="affix" data-offset-top="800" data-offset-bottom="400" role="navigation">
+              <ul class="nav">
+                  <li><a href="#constructor">constructor</a></li>
+                  <li><a href="#array">array</a></li>
+                  <li><a href="#length">length</a></li>
+                  <li><a href="#readpos">readPos</a></li>
+                  <li><a href="#textdecoder">textDecoder</a></li>
+                  <li><a href="#textencoder">textEncoder</a></li>
+                  <li><a href="#asuint8array">asUint8Array</a></li>
+                  <li><a href="#get">get</a></li>
+                  <li><a href="#getasset">getAsset</a></li>
+                  <li><a href="#getbytes">getBytes</a></li>
+                  <li><a href="#getfloat32">getFloat32</a></li>
+                  <li><a href="#getfloat64">getFloat64</a></li>
+                  <li><a href="#getname">getName</a></li>
+                  <li><a href="#getprivatekey">getPrivateKey</a></li>
+                  <li><a href="#getpublickey">getPublicKey</a></li>
+                  <li><a href="#getsignature">getSignature</a></li>
+                  <li><a href="#getstring">getString</a></li>
+                  <li><a href="#getsymbol">getSymbol</a></li>
+                  <li><a href="#getsymbolcode">getSymbolCode</a></li>
+                  <li><a href="#getuint16">getUint16</a></li>
+                  <li><a href="#getuint32">getUint32</a></li>
+                  <li><a href="#getuint64asnumber">getUint64AsNumber</a></li>
+                  <li><a href="#getuint8array">getUint8Array</a></li>
+                  <li><a href="#getvarint32">getVarint32</a></li>
+                  <li><a href="#getvaruint32">getVaruint32</a></li>
+                  <li><a href="#havereaddata">haveReadData</a></li>
+                  <li><a href="#push">push</a></li>
+                  <li><a href="#pusharray">pushArray</a></li>
+                  <li><a href="#pushasset">pushAsset</a></li>
+                  <li><a href="#pushbytes">pushBytes</a></li>
+                  <li><a href="#pushfloat32">pushFloat32</a></li>
+                  <li><a href="#pushfloat64">pushFloat64</a></li>
+                  <li><a href="#pushname">pushName</a></li>
+                  <li><a href="#pushnumberasuint64">pushNumberAsUint64</a></li>
+                  <li><a href="#pushprivatekey">pushPrivateKey</a></li>
+                  <li><a href="#pushpublickey">pushPublicKey</a></li>
+                  <li><a href="#pushsignature">pushSignature</a></li>
+                  <li><a href="#pushstring">pushString</a></li>
+                  <li><a href="#pushsymbol">pushSymbol</a></li>
+                  <li><a href="#pushsymbolcode">pushSymbolCode</a></li>
+                  <li><a href="#pushuint16">pushUint16</a></li>
+                  <li><a href="#pushuint32">pushUint32</a></li>
+                  <li><a href="#pushuint8arraychecked">pushUint8ArrayChecked</a></li>
+                  <li><a href="#pushvarint32">pushVarint32</a></li>
+                  <li><a href="#pushvaruint32">pushVaruint32</a></li>
+                  <li><a href="#reserve">reserve</a></li>
+                  <li><a href="#restartread">restartRead</a></li>
+              </ul>
+            </nav>
+        </div>
+
+        <div class="col-md-9">
+
+          <section class="welcome">
+            <div class="row">
+              <div class="col-md-12 left-align">
+                <h2 class="dark-text">API Serialize Buffer</h2>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class="row">
+              <div class="col-md-12 left-align">
+                <p>Serialize and deserialize data</p>
+<h1 id="hierarchy">Hierarchy</h1>
+<p><strong>SerialBuffer</strong></p>
+<h1 id="constructors">Constructors</h1>
+<p><a id="constructor"></a></p>
+<h2 id="constructor">constructor</h2>
+<p>⊕ <strong>new SerialBuffer</strong>(__namedParameters?: <em><code>object</code></em>): <a href="serialize.serialbuffer.md">SerialBuffer</a></p>
+<p><em>Defined in <a href="https://github.com/EOSIO/eosjs/blob/e5ca122/src/eosjs-serialize.ts#L107">eosjs-serialize.ts:107</a></em></p>
+<p><strong>Parameters:</strong></p>
+<p><strong><code>Default value</code> __namedParameters: <code>object</code></strong></p>
+<ul>
+<li><code>array</code>: <code>null</code> if serializing, or binary data to deserialize</li>
+<li><code>textEncoder</code>: <code>TextEncoder</code> instance to use. Pass in <code>null</code> if running in a browser</li>
+<li><code>textDecoder</code>: <code>TextDecider</code> instance to use. Pass in <code>null</code> if running in a browser</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>array</td>
+<td><code>Uint8Array</code></td>
+</tr>
+<tr>
+<td>textDecoder</td>
+<td><code>TextDecoder</code></td>
+</tr>
+<tr>
+<td>textEncoder</td>
+<td><code>TextEncoder</code></td>
+</tr>
+</tbody></table>
+<p><strong>Returns:</strong> <a href="serialize.serialbuffer.md">SerialBuffer</a></p>
+<hr>
+<h1 id="properties">Properties</h1>
+<p><a id="array"></a></p>
+<h2 id="array">array</h2>
+<p><strong>● array</strong>: <em><code>Uint8Array</code></em></p>
+<p><em>Defined in <a href="https://github.com/EOSIO/eosjs/blob/e5ca122/src/eosjs-serialize.ts#L101">eosjs-serialize.ts:101</a></em></p>
+<p>Data in serialized (binary) form</p>
+<hr>
+<p><a id="length"></a></p>
+<h2 id="length">length</h2>
+<p><strong>● length</strong>: <em><code>number</code></em></p>
+<p><em>Defined in <a href="https://github.com/EOSIO/eosjs/blob/e5ca122/src/eosjs-serialize.ts#L98">eosjs-serialize.ts:98</a></em></p>
+<p>Amount of valid data in <code>array</code></p>
+<hr>
+<p><a id="readpos"></a></p>
+<h2 id="readpos">readPos</h2>
+<p><strong>● readPos</strong>: <em><code>number</code></em> = 0</p>
+<p><em>Defined in <a href="https://github.com/EOSIO/eosjs/blob/e5ca122/src/eosjs-serialize.ts#L104">eosjs-serialize.ts:104</a></em></p>
+<p>Current position while reading (deserializing)</p>
+<hr>
+<p><a id="textdecoder"></a></p>
+<h2 id="textdecoder">textDecoder</h2>
+<p><strong>● textDecoder</strong>: <em><code>TextDecoder</code></em></p>
+<p><em>Defined in <a href="https://github.com/EOSIO/eosjs/blob/e5ca122/src/eosjs-serialize.ts#L107">eosjs-serialize.ts:107</a></em></p>
+<hr>
+<p><a id="textencoder"></a></p>
+<h2 id="textencoder">textEncoder</h2>
+<p><strong>● textEncoder</strong>: <em><code>TextEncoder</code></em></p>
+<p><em>Defined in <a href="https://github.com/EOSIO/eosjs/blob/e5ca122/src/eosjs-serialize.ts#L106">eosjs-serialize.ts:106</a></em></p>
+<hr>
+<h1 id="methods">Methods</h1>
+<p><a id="asuint8array"></a></p>
+<h2 id="asuint8array">asUint8Array</h2>
+<p>▸ <strong>asUint8Array</strong>(): <code>Uint8Array</code></p>
+<p><em>Defined in <a href="https://github.com/EOSIO/eosjs/blob/e5ca122/src/eosjs-serialize.ts#L148">eosjs-serialize.ts:148</a></em></p>
+<p>Return data with excess storage trimmed away</p>
+<p><strong>Returns:</strong> <code>Uint8Array</code></p>
+<hr>
+<p><a id="get"></a></p>
+<h2 id="get">get</h2>
+<p>▸ <strong>get</strong>(): <code>number</code></p>
+<p><em>Defined in <a href="https://github.com/EOSIO/eosjs/blob/e5ca122/src/eosjs-serialize.ts#L165">eosjs-serialize.ts:165</a></em></p>
+<p>Get a single byte</p>
+<p><strong>Returns:</strong> <code>number</code></p>
+<hr>
+<p><a id="getasset"></a></p>
+<h2 id="getasset">getAsset</h2>
+<p>▸ <strong>getAsset</strong>(): <code>string</code></p>
+<p><em>Defined in <a href="https://github.com/EOSIO/eosjs/blob/e5ca122/src/eosjs-serialize.ts#L464">eosjs-serialize.ts:464</a></em></p>
+<p>Get an asset</p>
+<p><strong>Returns:</strong> <code>string</code></p>
+<hr>
+<p><a id="getbytes"></a></p>
+<h2 id="getbytes">getBytes</h2>
+<p>▸ <strong>getBytes</strong>(): <code>Uint8Array</code></p>
+<p><em>Defined in <a href="https://github.com/EOSIO/eosjs/blob/e5ca122/src/eosjs-serialize.ts#L364">eosjs-serialize.ts:364</a></em></p>
+<p>Get length-prefixed binary data</p>
+<p><strong>Returns:</strong> <code>Uint8Array</code></p>
+<hr>
+<p><a id="getfloat32"></a></p>
+<h2 id="getfloat32">getFloat32</h2>
+<p>▸ <strong>getFloat32</strong>(): <code>number</code></p>
+<p><em>Defined in <a href="https://github.com/EOSIO/eosjs/blob/e5ca122/src/eosjs-serialize.ts#L283">eosjs-serialize.ts:283</a></em></p>
+<p>Get a <code>float32</code></p>
+<p><strong>Returns:</strong> <code>number</code></p>
+<hr>
+<p><a id="getfloat64"></a></p>
+<h2 id="getfloat64">getFloat64</h2>
+<p>▸ <strong>getFloat64</strong>(): <code>number</code></p>
+<p><em>Defined in <a href="https://github.com/EOSIO/eosjs/blob/e5ca122/src/eosjs-serialize.ts#L293">eosjs-serialize.ts:293</a></em></p>
+<p>Get a <code>float64</code></p>
+<p><strong>Returns:</strong> <code>number</code></p>
+<hr>
+<p><a id="getname"></a></p>
+<h2 id="getname">getName</h2>
+<p>▸ <strong>getName</strong>(): <code>string</code></p>
+<p><em>Defined in <a href="https://github.com/EOSIO/eosjs/blob/e5ca122/src/eosjs-serialize.ts#L329">eosjs-serialize.ts:329</a></em></p>
+<p>Get a <code>name</code></p>
+<p><strong>Returns:</strong> <code>string</code></p>
+<hr>
+<p><a id="getprivatekey"></a></p>
+<h2 id="getprivatekey">getPrivateKey</h2>
+<p>▸ <strong>getPrivateKey</strong>(): <code>string</code></p>
+<p><em>Defined in <a href="https://github.com/EOSIO/eosjs/blob/e5ca122/src/eosjs-serialize.ts#L496">eosjs-serialize.ts:496</a></em></p>
+<p>Get a private key</p>
+<p><strong>Returns:</strong> <code>string</code></p>
+<hr>
+<p><a id="getpublickey"></a></p>
+<h2 id="getpublickey">getPublicKey</h2>
+<p>▸ <strong>getPublicKey</strong>(): <code>string</code></p>
+<p><em>Defined in <a href="https://github.com/EOSIO/eosjs/blob/e5ca122/src/eosjs-serialize.ts#L482">eosjs-serialize.ts:482</a></em></p>
+<p>Get a public key</p>
+<p><strong>Returns:</strong> <code>string</code></p>
+<hr>
+<p><a id="getsignature"></a></p>
+<h2 id="getsignature">getSignature</h2>
+<p>▸ <strong>getSignature</strong>(): <code>string</code></p>
+<p><em>Defined in <a href="https://github.com/EOSIO/eosjs/blob/e5ca122/src/eosjs-serialize.ts#L510">eosjs-serialize.ts:510</a></em></p>
+<p>Get a signature</p>
+<p><strong>Returns:</strong> <code>string</code></p>
+<hr>
+<p><a id="getstring"></a></p>
+<h2 id="getstring">getString</h2>
+<p>▸ <strong>getString</strong>(): <code>string</code></p>
+<p><em>Defined in <a href="https://github.com/EOSIO/eosjs/blob/e5ca122/src/eosjs-serialize.ts#L374">eosjs-serialize.ts:374</a></em></p>
+<p>Get a string</p>
+<p><strong>Returns:</strong> <code>string</code></p>
+<hr>
+<p><a id="getsymbol"></a></p>
+<h2 id="getsymbol">getSymbol</h2>
+<p>▸ <strong>getSymbol</strong>(): <code>object</code></p>
+<p><em>Defined in <a href="https://github.com/EOSIO/eosjs/blob/e5ca122/src/eosjs-serialize.ts#L415">eosjs-serialize.ts:415</a></em></p>
+<p>Get a <code>symbol</code></p>
+<p><strong>Returns:</strong> <code>object</code></p>
+<hr>
+<p><a id="getsymbolcode"></a></p>
+<h2 id="getsymbolcode">getSymbolCode</h2>
+<p>▸ <strong>getSymbolCode</strong>(): <code>string</code></p>
+<p><em>Defined in <a href="https://github.com/EOSIO/eosjs/blob/e5ca122/src/eosjs-serialize.ts#L392">eosjs-serialize.ts:392</a></em></p>
+<p>Get a <code>symbol_code</code>. Unlike <code>symbol</code>, <code>symbol_code</code> doesn&#39;t include a precision.</p>
+<p><strong>Returns:</strong> <code>string</code></p>
+<hr>
+<p><a id="getuint16"></a></p>
+<h2 id="getuint16">getUint16</h2>
+<p>▸ <strong>getUint16</strong>(): <code>number</code></p>
+<p><em>Defined in <a href="https://github.com/EOSIO/eosjs/blob/e5ca122/src/eosjs-serialize.ts#L196">eosjs-serialize.ts:196</a></em></p>
+<p>Get a <code>uint16</code></p>
+<p><strong>Returns:</strong> <code>number</code></p>
+<hr>
+<p><a id="getuint32"></a></p>
+<h2 id="getuint32">getUint32</h2>
+<p>▸ <strong>getUint32</strong>(): <code>number</code></p>
+<p><em>Defined in <a href="https://github.com/EOSIO/eosjs/blob/e5ca122/src/eosjs-serialize.ts#L209">eosjs-serialize.ts:209</a></em></p>
+<p>Get a <code>uint32</code></p>
+<p><strong>Returns:</strong> <code>number</code></p>
+<hr>
+<p><a id="getuint64asnumber"></a></p>
+<h2 id="getuint64asnumber">getUint64AsNumber</h2>
+<p>▸ <strong>getUint64AsNumber</strong>(): <code>number</code></p>
+<p><em>Defined in <a href="https://github.com/EOSIO/eosjs/blob/e5ca122/src/eosjs-serialize.ts#L228">eosjs-serialize.ts:228</a></em></p>
+<p>Get a <code>uint64</code> as a <code>number</code>. <em>Caution</em>: <code>number</code> only has 53 bits of precision; some values will change. <code>numeric.binaryToDecimal(serialBuffer.getUint8Array(8))</code> recommended instead</p>
+<p><strong>Returns:</strong> <code>number</code></p>
+<hr>
+<p><a id="getuint8array"></a></p>
+<h2 id="getuint8array">getUint8Array</h2>
+<p>▸ <strong>getUint8Array</strong>(len: <em><code>number</code></em>): <code>Uint8Array</code></p>
+<p><em>Defined in <a href="https://github.com/EOSIO/eosjs/blob/e5ca122/src/eosjs-serialize.ts#L181">eosjs-serialize.ts:181</a></em></p>
+<p>Get <code>len</code> bytes</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>len</td>
+<td><code>number</code></td>
+</tr>
+</tbody></table>
+<p><strong>Returns:</strong> <code>Uint8Array</code></p>
+<hr>
+<p><a id="getvarint32"></a></p>
+<h2 id="getvarint32">getVarint32</h2>
+<p>▸ <strong>getVarint32</strong>(): <code>number</code></p>
+<p><em>Defined in <a href="https://github.com/EOSIO/eosjs/blob/e5ca122/src/eosjs-serialize.ts#L268">eosjs-serialize.ts:268</a></em></p>
+<p>Get a <code>varint32</code></p>
+<p><strong>Returns:</strong> <code>number</code></p>
+<hr>
+<p><a id="getvaruint32"></a></p>
+<h2 id="getvaruint32">getVaruint32</h2>
+<p>▸ <strong>getVaruint32</strong>(): <code>number</code></p>
+<p><em>Defined in <a href="https://github.com/EOSIO/eosjs/blob/e5ca122/src/eosjs-serialize.ts#L248">eosjs-serialize.ts:248</a></em></p>
+<p>Get a <code>varuint32</code></p>
+<p><strong>Returns:</strong> <code>number</code></p>
+<hr>
+<p><a id="havereaddata"></a></p>
+<h2 id="havereaddata">haveReadData</h2>
+<p>▸ <strong>haveReadData</strong>(): <code>boolean</code></p>
+<p><em>Defined in <a href="https://github.com/EOSIO/eosjs/blob/e5ca122/src/eosjs-serialize.ts#L138">eosjs-serialize.ts:138</a></em></p>
+<p>Is there data available to read?</p>
+<p><strong>Returns:</strong> <code>boolean</code></p>
+<hr>
+<p><a id="push"></a></p>
+<h2 id="push">push</h2>
+<p>▸ <strong>push</strong>(...v: <em><code>number</code>[]</em>): <code>void</code></p>
+<p><em>Defined in <a href="https://github.com/EOSIO/eosjs/blob/e5ca122/src/eosjs-serialize.ts#L160">eosjs-serialize.ts:160</a></em></p>
+<p>Append bytes</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>Rest</code> v</td>
+<td><code>number</code>[]</td>
+</tr>
+</tbody></table>
+<p><strong>Returns:</strong> <code>void</code></p>
+<hr>
+<p><a id="pusharray"></a></p>
+<h2 id="pusharray">pushArray</h2>
+<p>▸ <strong>pushArray</strong>(v: * <code>number</code>[] &#124; <code>Uint8Array</code>*): <code>void</code></p>
+<p><em>Defined in <a href="https://github.com/EOSIO/eosjs/blob/e5ca122/src/eosjs-serialize.ts#L153">eosjs-serialize.ts:153</a></em></p>
+<p>Append bytes</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>v</td>
+<td><code>number</code>[] &#124; <code>Uint8Array</code></td>
+</tr>
+</tbody></table>
+<p><strong>Returns:</strong> <code>void</code></p>
+<hr>
+<p><a id="pushasset"></a></p>
+<h2 id="pushasset">pushAsset</h2>
+<p>▸ <strong>pushAsset</strong>(s: <em><code>string</code></em>): <code>void</code></p>
+<p><em>Defined in <a href="https://github.com/EOSIO/eosjs/blob/e5ca122/src/eosjs-serialize.ts#L429">eosjs-serialize.ts:429</a></em></p>
+<p>Append an asset</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>s</td>
+<td><code>string</code></td>
+</tr>
+</tbody></table>
+<p><strong>Returns:</strong> <code>void</code></p>
+<hr>
+<p><a id="pushbytes"></a></p>
+<h2 id="pushbytes">pushBytes</h2>
+<p>▸ <strong>pushBytes</strong>(v: * <code>number</code>[] &#124; <code>Uint8Array</code>*): <code>void</code></p>
+<p><em>Defined in <a href="https://github.com/EOSIO/eosjs/blob/e5ca122/src/eosjs-serialize.ts#L358">eosjs-serialize.ts:358</a></em></p>
+<p>Append length-prefixed binary data</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>v</td>
+<td><code>number</code>[] &#124; <code>Uint8Array</code></td>
+</tr>
+</tbody></table>
+<p><strong>Returns:</strong> <code>void</code></p>
+<hr>
+<p><a id="pushfloat32"></a></p>
+<h2 id="pushfloat32">pushFloat32</h2>
+<p>▸ <strong>pushFloat32</strong>(v: <em><code>number</code></em>): <code>void</code></p>
+<p><em>Defined in <a href="https://github.com/EOSIO/eosjs/blob/e5ca122/src/eosjs-serialize.ts#L278">eosjs-serialize.ts:278</a></em></p>
+<p>Append a <code>float32</code></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>v</td>
+<td><code>number</code></td>
+</tr>
+</tbody></table>
+<p><strong>Returns:</strong> <code>void</code></p>
+<hr>
+<p><a id="pushfloat64"></a></p>
+<h2 id="pushfloat64">pushFloat64</h2>
+<p>▸ <strong>pushFloat64</strong>(v: <em><code>number</code></em>): <code>void</code></p>
+<p><em>Defined in <a href="https://github.com/EOSIO/eosjs/blob/e5ca122/src/eosjs-serialize.ts#L288">eosjs-serialize.ts:288</a></em></p>
+<p>Append a <code>float64</code></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>v</td>
+<td><code>number</code></td>
+</tr>
+</tbody></table>
+<p><strong>Returns:</strong> <code>void</code></p>
+<hr>
+<p><a id="pushname"></a></p>
+<h2 id="pushname">pushName</h2>
+<p>▸ <strong>pushName</strong>(s: <em><code>string</code></em>): <code>void</code></p>
+<p><em>Defined in <a href="https://github.com/EOSIO/eosjs/blob/e5ca122/src/eosjs-serialize.ts#L298">eosjs-serialize.ts:298</a></em></p>
+<p>Append a <code>name</code></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>s</td>
+<td><code>string</code></td>
+</tr>
+</tbody></table>
+<p><strong>Returns:</strong> <code>void</code></p>
+<hr>
+<p><a id="pushnumberasuint64"></a></p>
+<h2 id="pushnumberasuint64">pushNumberAsUint64</h2>
+<p>▸ <strong>pushNumberAsUint64</strong>(v: <em><code>number</code></em>): <code>void</code></p>
+<p><em>Defined in <a href="https://github.com/EOSIO/eosjs/blob/e5ca122/src/eosjs-serialize.ts#L219">eosjs-serialize.ts:219</a></em></p>
+<p>Append a <code>uint64</code>. <em>Caution</em>: <code>number</code> only has 53 bits of precision</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>v</td>
+<td><code>number</code></td>
+</tr>
+</tbody></table>
+<p><strong>Returns:</strong> <code>void</code></p>
+<hr>
+<p><a id="pushprivatekey"></a></p>
+<h2 id="pushprivatekey">pushPrivateKey</h2>
+<p>▸ <strong>pushPrivateKey</strong>(s: <em><code>string</code></em>): <code>void</code></p>
+<p><em>Defined in <a href="https://github.com/EOSIO/eosjs/blob/e5ca122/src/eosjs-serialize.ts#L489">eosjs-serialize.ts:489</a></em></p>
+<p>Append a private key</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>s</td>
+<td><code>string</code></td>
+</tr>
+</tbody></table>
+<p><strong>Returns:</strong> <code>void</code></p>
+<hr>
+<p><a id="pushpublickey"></a></p>
+<h2 id="pushpublickey">pushPublicKey</h2>
+<p>▸ <strong>pushPublicKey</strong>(s: <em><code>string</code></em>): <code>void</code></p>
+<p><em>Defined in <a href="https://github.com/EOSIO/eosjs/blob/e5ca122/src/eosjs-serialize.ts#L475">eosjs-serialize.ts:475</a></em></p>
+<p>Append a public key</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>s</td>
+<td><code>string</code></td>
+</tr>
+</tbody></table>
+<p><strong>Returns:</strong> <code>void</code></p>
+<hr>
+<p><a id="pushsignature"></a></p>
+<h2 id="pushsignature">pushSignature</h2>
+<p>▸ <strong>pushSignature</strong>(s: <em><code>string</code></em>): <code>void</code></p>
+<p><em>Defined in <a href="https://github.com/EOSIO/eosjs/blob/e5ca122/src/eosjs-serialize.ts#L503">eosjs-serialize.ts:503</a></em></p>
+<p>Append a signature</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>s</td>
+<td><code>string</code></td>
+</tr>
+</tbody></table>
+<p><strong>Returns:</strong> <code>void</code></p>
+<hr>
+<p><a id="pushstring"></a></p>
+<h2 id="pushstring">pushString</h2>
+<p>▸ <strong>pushString</strong>(v: <em><code>string</code></em>): <code>void</code></p>
+<p><em>Defined in <a href="https://github.com/EOSIO/eosjs/blob/e5ca122/src/eosjs-serialize.ts#L369">eosjs-serialize.ts:369</a></em></p>
+<p>Append a string</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>v</td>
+<td><code>string</code></td>
+</tr>
+</tbody></table>
+<p><strong>Returns:</strong> <code>void</code></p>
+<hr>
+<p><a id="pushsymbol"></a></p>
+<h2 id="pushsymbol">pushSymbol</h2>
+<p>▸ <strong>pushSymbol</strong>(__namedParameters: <em><code>object</code></em>): <code>void</code></p>
+<p><em>Defined in <a href="https://github.com/EOSIO/eosjs/blob/e5ca122/src/eosjs-serialize.ts#L405">eosjs-serialize.ts:405</a></em></p>
+<p>Append a <code>symbol</code></p>
+<p><strong>Parameters:</strong></p>
+<p><strong>__namedParameters: <code>object</code></strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>name</td>
+<td><code>string</code></td>
+</tr>
+<tr>
+<td>precision</td>
+<td><code>number</code></td>
+</tr>
+</tbody></table>
+<p><strong>Returns:</strong> <code>void</code></p>
+<hr>
+<p><a id="pushsymbolcode"></a></p>
+<h2 id="pushsymbolcode">pushSymbolCode</h2>
+<p>▸ <strong>pushSymbolCode</strong>(name: <em><code>string</code></em>): <code>void</code></p>
+<p><em>Defined in <a href="https://github.com/EOSIO/eosjs/blob/e5ca122/src/eosjs-serialize.ts#L379">eosjs-serialize.ts:379</a></em></p>
+<p>Append a <code>symbol_code</code>. Unlike <code>symbol</code>, <code>symbol_code</code> doesn&#39;t include a precision.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>name</td>
+<td><code>string</code></td>
+</tr>
+</tbody></table>
+<p><strong>Returns:</strong> <code>void</code></p>
+<hr>
+<p><a id="pushuint16"></a></p>
+<h2 id="pushuint16">pushUint16</h2>
+<p>▸ <strong>pushUint16</strong>(v: <em><code>number</code></em>): <code>void</code></p>
+<p><em>Defined in <a href="https://github.com/EOSIO/eosjs/blob/e5ca122/src/eosjs-serialize.ts#L191">eosjs-serialize.ts:191</a></em></p>
+<p>Append a <code>uint16</code></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>v</td>
+<td><code>number</code></td>
+</tr>
+</tbody></table>
+<p><strong>Returns:</strong> <code>void</code></p>
+<hr>
+<p><a id="pushuint32"></a></p>
+<h2 id="pushuint32">pushUint32</h2>
+<p>▸ <strong>pushUint32</strong>(v: <em><code>number</code></em>): <code>void</code></p>
+<p><em>Defined in <a href="https://github.com/EOSIO/eosjs/blob/e5ca122/src/eosjs-serialize.ts#L204">eosjs-serialize.ts:204</a></em></p>
+<p>Append a <code>uint32</code></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>v</td>
+<td><code>number</code></td>
+</tr>
+</tbody></table>
+<p><strong>Returns:</strong> <code>void</code></p>
+<hr>
+<p><a id="pushuint8arraychecked"></a></p>
+<h2 id="pushuint8arraychecked">pushUint8ArrayChecked</h2>
+<p>▸ <strong>pushUint8ArrayChecked</strong>(v: <em><code>Uint8Array</code></em>, len: <em><code>number</code></em>): <code>void</code></p>
+<p><em>Defined in <a href="https://github.com/EOSIO/eosjs/blob/e5ca122/src/eosjs-serialize.ts#L173">eosjs-serialize.ts:173</a></em></p>
+<p>Append bytes in <code>v</code>. Throws if <code>len</code> doesn&#39;t match <code>v.length</code></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>v</td>
+<td><code>Uint8Array</code></td>
+</tr>
+<tr>
+<td>len</td>
+<td><code>number</code></td>
+</tr>
+</tbody></table>
+<p><strong>Returns:</strong> <code>void</code></p>
+<hr>
+<p><a id="pushvarint32"></a></p>
+<h2 id="pushvarint32">pushVarint32</h2>
+<p>▸ <strong>pushVarint32</strong>(v: <em><code>number</code></em>): <code>void</code></p>
+<p><em>Defined in <a href="https://github.com/EOSIO/eosjs/blob/e5ca122/src/eosjs-serialize.ts#L263">eosjs-serialize.ts:263</a></em></p>
+<p>Append a <code>varint32</code></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>v</td>
+<td><code>number</code></td>
+</tr>
+</tbody></table>
+<p><strong>Returns:</strong> <code>void</code></p>
+<hr>
+<p><a id="pushvaruint32"></a></p>
+<h2 id="pushvaruint32">pushVaruint32</h2>
+<p>▸ <strong>pushVaruint32</strong>(v: <em><code>number</code></em>): <code>void</code></p>
+<p><em>Defined in <a href="https://github.com/EOSIO/eosjs/blob/e5ca122/src/eosjs-serialize.ts#L235">eosjs-serialize.ts:235</a></em></p>
+<p>Append a <code>varuint32</code></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>v</td>
+<td><code>number</code></td>
+</tr>
+</tbody></table>
+<p><strong>Returns:</strong> <code>void</code></p>
+<hr>
+<p><a id="reserve"></a></p>
+<h2 id="reserve">reserve</h2>
+<p>▸ <strong>reserve</strong>(size: <em><code>number</code></em>): <code>void</code></p>
+<p><em>Defined in <a href="https://github.com/EOSIO/eosjs/blob/e5ca122/src/eosjs-serialize.ts#L124">eosjs-serialize.ts:124</a></em></p>
+<p>Resize <code>array</code> if needed to have at least <code>size</code> bytes free</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>size</td>
+<td><code>number</code></td>
+</tr>
+</tbody></table>
+<p><strong>Returns:</strong> <code>void</code></p>
+<hr>
+<p><a id="restartread"></a></p>
+<h2 id="restartread">restartRead</h2>
+<p>▸ <strong>restartRead</strong>(): <code>void</code></p>
+<p><em>Defined in <a href="https://github.com/EOSIO/eosjs/blob/e5ca122/src/eosjs-serialize.ts#L143">eosjs-serialize.ts:143</a></em></p>
+<p>Restart reading from the beginning</p>
+<p><strong>Returns:</strong> <code>void</code></p>
+<hr>
+
+              </div>
+            </div>
+          </section>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/retina.js"></script>
+  <script src="../js/jquery.fitvids.js"></script>
+  <script src="../js/wow.js"></script>
+  <script src="../js/jquery.prettyPhoto.js"></script>
+
+  <script src="../js/custom.js"></script>
+  <script src="../js/main.js"></script>
+
+  <script src="../js/syntax-highlighter/scripts/shCore.js"></script>
+  <script src="../js/syntax-highlighter/scripts/shBrushXml.js"></script>
+  <script src="../js/syntax-highlighter/scripts/shBrushCss.js"></script>
+  <script src="../js/syntax-highlighter/scripts/shBrushJScript.js"></script>
+
+</body>
+
+</html>
